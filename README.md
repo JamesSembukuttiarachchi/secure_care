@@ -58,7 +58,7 @@ Note that this path only works for the default directory and you should change y
 ## Contributors
 - [Silverviles](https://github.com/Silverviles)
 - [W.S.M. Fonseka]()
-- [J.S. Sembukuttiarachchi]()
+- [J.S. Sembukuttiarachchi](https://github.com/JamesSembukuttiarachchi)
 - [K.G.D. Kavinda](https://github.com/kavindakgd)
 - [R.T. Marambe]()
 
