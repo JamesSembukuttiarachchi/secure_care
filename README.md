@@ -56,7 +56,7 @@ Note that this path only works for the default directory and you should change y
 - Bootstrap
 
 ## Contributors
-- [Silverviles](https://github.com/Silverviles)
+- [A.H.L.T.S. Siriwardhana](https://github.com/Silverviles)
 - [W.S.M. Fonseka]()
 - [J.S. Sembukuttiarachchi](https://github.com/JamesSembukuttiarachchi)
 - [K.G.D. Kavinda](https://github.com/kavindakgd)
