@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles/Home.css">
+    <link rel="stylesheet" href="styles/header_footer_revise.css">
+    <script src="https://kit.fontawesome.com/c0ffbede71.js"></script>
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+    <title>Home</title>
+    <script>
+        // Check if there is an error query parameter in the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const errorMessage = urlParams.get('message');
+
+        // Display the error message in an alert box
+        if (errorMessage) {
+            alert(errorMessage);
+            window.location.href = "Home.html"; // Redirect to homepage with a clear url to stop the looping of the alert box
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <!-- Logo image or text -->
+            <img src="images/logo.jpeg" alt="Logo" width="100" height="100" />
+        </div>
+
+        <div class="navigation">
+            <ul>
+                <!-- First row of navigation tabs -->
+                <li><a class="active" href="Home.html">Home</a></li>
+                <li><a href="channelDoctor.php">Medical Services</a></li>
+                <li><a href="healthPlans.php">Insurance Plan</a></li>
+                <li><a href="news.php">News</a></li>
+                <li><a href="MedicalStore.php">Medical Store</a></li>
+            </ul>
+            <ul class="header_nav">
+                <!-- Second row of navigation tabs -->
+                <li><a href="patientlogin.html">Customer Portal</a></li>
+                <li><a href="pay_online.html">Pay Online</a></li>
+                <li><a href="contact_us.php">Contact Us</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+            </ul>
+        </div>
+
+        <div class="search-bar">
+            <!-- Search bar -->
+            <input type="text" placeholder="Search..." />
+            <button type="submit">Search</button>
+            <!--<button type="submit" class="sign">Sign Up/Login</button>-->
+            <button id="profile" name="profile" onclick="redirectToProfile()">
+                <i class="fa-solid fa-user"></i> 
+                <a href="handle_profile.php" style="text-decoration: none;">Profile</a>
+            </button>
+        </div>
+
+        <div style="clear: both;"></div> <!-- Clear float -->
+    </header>
+    <!--slider-->
+    <div class="image-slider">
+        <div class="slides">
+            <img src="images/car1.jpeg" alt="Image 1" style="height: auto;">
+        </div>
+
+        <div class="slides">
+            <img src="images/car2.webp" alt="Image 2" style="height: auto;">
+        </div>
+
+        <div class="slides">
+            <img src="images/car3.jpeg" alt="Image 3" style="height: auto;">
+        </div>
+    </div>
+
+    <!--slider_finish-->
+    <!--news, insurance plans, medical store-->
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr);">
+        <div class="dcontainer" id="news-container">
+            <h4>News</h4>
+            <p>In a significant development for the healthcare industry, a state-of-the-art Health Insurance Management System (HIMS) has been launched, aiming to revolutionize the way health insurance is administered and accessed. The innovative platform, developed in collaboration with leading insurance providers and technology experts, seeks to simplify the complexities of health insurance and enhance the overall user experience.</p>
+            <button onclick="window.location.href = 'news.php'">Read More</button>
+        </div>
+    
+        <div class="dcontainer" id="insuplan-container">
+            <h4>Insurance Plan</h4>
+            <p>Discover the best insurance coverages tailored just for you! Join us today and experience peace of mind with comprehensive protection. Our dedicated team is committed to understanding your unique needs, providing personalized solutions, and offering exceptional customer service. Don't miss out on the opportunity to secure the best insurance coverage available. Join us now and protect what matters most to you!</p>
+            <button onclick="window.location.href = 'contact_usP.html'">Contact Us</button>
+        </div>
+    
+        <div class="dcontainer" id="medicalstore-container">
+            <h4>Medical Store</h4>
+            <p>Introducing our new medical store, your one-stop destination for all your healthcare needs. We offer a wide range of quality products, from medications to medical equipment, with expert guidance. Experience convenience and reliability as we prioritize your well-being. Visit us today for exceptional care and support.</p>
+            <button onclick="window.location.href = 'MedicalStore.php'">Visit Our Store</button>
+        </div>
+    </div>
+    
+    <!--End of the containers-->
+    <!--slider_review-->
+    <div class="text-slider">
+        <div class="review-container">
+            <div class="review-slide">
+                <h2>Sarah Johnson</h2>
+                <p>"I am extremely satisfied with the insurance coverages provided by this system. It offers comprehensive options that suit my needs perfectly. The process was seamless, and their customer support team was outstanding. Highly recommended!"</p>
+            </div>
+
+            <div class="review-slide">
+                <h2>Michael Thompson</h2>
+                <p>"The medical store offered by this system is a game-changer. I can conveniently purchase all my healthcare products in one place, with a wide selection and competitive prices. The quality is top-notch, and the staff is knowledgeable and friendly. A fantastic resource!"</p>
+            </div>
+
+            <div class="review-slide">
+                <h2>Emily Davis</h2>
+                <p>"Booking doctor appointments through this system has simplified my life. I no longer have to spend hours on the phone or juggle multiple websites. The interface is user-friendly, and I can find available slots quickly. It has made managing my healthcare appointments hassle-free. Thank you!"</p>
+            </div>
+        </div>
+    </div>
+
+    <!--end_of_slider-->
+
+    <footer>
+        <div class="row">
+            <div class="col">
+                <img src="images/logo.jpeg" alt="Logo" style="width: 100px; height: 100px;" />
+                <p>"SecureCare: Your Health, Our Priority"</p>
+            </div>
+            <div class="col">
+                <h3>Links</h3>
+                
+                <div class="footer-link-buttons">
+                    <div><a href="contact_us.php">Contact Us</a></div>
+                    <div><a href="">Terms & Conditions</a></div>
+                    <div><a href="">Privacy & Cookies Policy</a></div>
+                    <div><a href="faq.html">FAQ's</a></div>
+                </div>
+            </div>
+            <div class="col">
+                <h3>Newsletter</h3>
+                <form action="newsletter.php" method="post" id="newsletterForm">
+                    <div style="width: 88%; margin-top: 10px;">
+                        <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div>
+                        <button id="subscribeButton" name="submit" value="subscribe">Subscribe</button>
+                        <button id="unsubscribeButton" name="submit" value="unsubscribe">Unsubscribe</button>
+                        <button type="button" id="updateButton" name="submit" value="update">Update</button>
+                    </div>
+
+                    <div class="social-icons">
+                        <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="www.dribble.com"><i class="fa-brands fa-dribbble"></i></a>
+                    </div>
+
+                    <!-- Hidden dialog box -->
+                    <div id="changeEmail" style="display: none;">
+                        <input type="email" id="oldEmailInput" name="old_email" placeholder="Old Email">
+                        <button type="submit" name="confirm_update" onclick="validateAndSubmit()">OK</button>
+                    </div>
+
+                    <script>
+                        function showChangeEmail(event) {
+                            event.preventDefault(); // Prevent form submission
+
+                            document.getElementById("emailInput").placeholder = "New Email";
+                            document.getElementById("subscribeButton").style.display = "none";
+                            document.getElementById("unsubscribeButton").style.display = "none";
+                            document.getElementById("updateButton").style.display = "none";
+                            document.getElementById("changeEmail").style.display = "block";
+                        }
+
+                        function validateAndSubmit(event) {
+                            event.preventDefault(); // Prevent form submission
+
+                            var oldEmail = document.getElementById("oldEmailInput").value;
+                            var newEmail = document.getElementById("emailInput").value;
+
+                            if (oldEmail && newEmail) {
+                                document.getElementById("newsletterForm").submit(); // Submit the form
+                            }
+                        }
+
+                        document.getElementById('updateButton').addEventListener('click', showChangeEmail);
+                    </script>
+                </form>
+
+            </div>
+        </div>
+            
+        
+        <div><p class="copyright">&copy 2023 All rights reserved.</p></div>
+        
+    </footer>
+    <script src="scripts/home_script.js"></script>
+    
+</body>
+</html>

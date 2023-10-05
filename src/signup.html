@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Signup</title>
+    <link rel="stylesheet" type="text/css" href="styles/login_signup.css"/>
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+
+    <script>
+        // Get the value of the 'alert' parameter from the URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const alertMessage = urlParams.get('alert');
+
+        // Display the alert message if it exists
+        if (alertMessage) {
+            alert(alertMessage);
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <form id="signup_form" action="signup.php" method="POST">
+            <center><h1>Signup</h1></center>
+            <select name="select_role" id="select_role" placeholder=" - Select Your Role - " required>
+                <option value="patient">Patient</option>
+                <option value="doctor">Doctor</option>
+                <option value="insurance_agent">Insurance Agent</option>
+                <option value="healthcare_provider">Healthcare Provider</option>
+                <option value="broker">Broker</option>
+            </select><br /><br />
+            <input type="submit" id="next" name="next" value="Next" /><br /><br /><br />
+            <div id="signin_from_signup" style="align-items: center;">
+                <label for="sigunp">Already Have an account ?</label>
+                <a href="login.html">Signin Now.</a>
+            </div>
+            <input type="button" id="facebook" name="facebook" value="Signup with Facebook" />
+            <input type="button" id="google" name="google" value="Signup with Google" />
+        </form>
+    </main>
+
+    <script src="scripts/onclick.js"></script>
+</body>
+</html>

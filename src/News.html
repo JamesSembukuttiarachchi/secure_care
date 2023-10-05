@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/cover.css" />
+    <title>News</title>
+  </head>
+  <body>
+    <div class="div1" style="text-align: center;">
+      <h1>News and Media</h1>
+    </div>
+    <div class="add-news-container" style="display: flex; justify-content: flex-end;">
+      <button class="add-news-button" onclick="showCustomAlert()">Add News</button>
+    </div>
+    <div class="news-container">
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p id="p1" class="newspara" maxlength="10";>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          dolorem soluta nihil eius deserunt reiciendis, veritatis aut rerum
+          doloremque odit, esse repellat maxime, laborum similique! Officiis,
+          rem, necessitatibus animi aspernatur ullam earum delectus perferendis
+          obcaecati odio ratione, autem neque blanditiis similique qui est in
+          commodi veniam velit nemo quos vero!
+        </p>
+      </div>
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p class="newspara">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          facilis porro omnis quam asperiores. Necessitatibus perferendis
+          voluptate temporibus. Eos maxime commodi aliquid consequuntur esse
+          expedita, molestiae facere, harum est consectetur aperiam vel
+          reprehenderit necessitatibus! Odio ducimus vero, perferendis magnam ab
+          quaerat, est unde animi, saepe odit quibusdam delectus ea ut?
+        </p>
+      </div>
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p class="newspara">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!
+          Ex ab itaque odit omnis esse dignissimos nemo aliquam nesciunt hic
+          autem porro adipisci quam incidunt corporis eaque ullam, tenetur rerum
+          expedita est unde voluptatem ut minus enim. Natus dolores laborum amet
+          molestiae adipisci temporibus! Dolorem molestias eum reiciendis
+          officiis?
+        </p>
+      </div>
+    </div>
+    <div id="customAlertBox" class="customAlert hidden">
+      <div class="customAlertContent">
+        <span class="closeButton" onclick="closeCustomAlert()">&times;</span>
+        <h3>Enter News Details</h3>
+        <form action="#" method="post">
+          <div>
+            <textarea name="news1" id="" cols="30" rows="10"></textarea>
+          </div>
+          <div>
+            <input name="valid_days" type="number" placeholder="Enter valid days" min="1">
+          </div>
+        </form>
+        <button class="submit-btn" onclick="closeCustomAlert()">Submit</button>
+      </div>
+    </div>
+    <div class="news-container">
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p class="newspara">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          dolorem soluta nihil eius deserunt reiciendis, veritatis aut rerum
+          doloremque odit, esse repellat maxime, laborum similique! Officiis,
+          rem, necessitatibus animi aspernatur ullam earum delectus perferendis
+          obcaecati odio ratione, autem neque blanditiis similique qui est in
+          commodi veniam velit nemo quos vero!
+        </p>
+      </div>
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p class="newspara">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis
+          facilis porro omnis quam asperiores. Necessitatibus perferendis
+          voluptate temporibus. Eos maxime commodi aliquid consequuntur esse
+          expedita, molestiae facere, harum est consectetur aperiam vel
+          reprehenderit necessitatibus! Odio ducimus vero, perferendis magnam ab
+          quaerat, est unde animi, saepe odit quibusdam delectus ea ut?
+        </p>
+      </div>
+      <div class="news1">
+        <img class="coverphoto" src="images/cover1.jpg" alt="news cover" />
+        <p class="newspara">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora!
+          Ex ab itaque odit omnis esse dignissimos nemo aliquam nesciunt hic
+          autem porro adipisci quam incidunt corporis eaque ullam, tenetur rerum
+          expedita est unde voluptatem ut minus enim. Natus dolores laborum amet
+          molestiae adipisci temporibus! Dolorem molestias eum reiciendis
+          officiis?
+        </p>
+      </div>
+    </div>
+    <script>
+      var wordCount = 0;
+      let para = document.getElementById('p1');
+      var texx = para.textContent;
+      var words = texx.trim().split(/\s+/);
+      wordCount = words.length;
+      console.log(wordCount);
+
+      function showCustomAlert() {
+            var customAlertBox = document.getElementById('customAlertBox');
+            customAlertBox.classList.remove('hidden');
+      }
+
+      function closeCustomAlert() {
+            var customAlertBox = document.getElementById('customAlertBox');
+            customAlertBox.classList.add('hidden');
+      }
+
+      function showAlertAndClearURL() {
+        // Get the current URL
+        var currentURL = window.location.href;
+
+        // Check if the URL contains the query parameter "access" with a value of 0
+        if (currentURL.indexOf('?access=0') !== -1) {
+          // Show an alert box
+          alert('Access denied.');
+
+          // Clear the URL after dismissing the alert box
+          window.history.replaceState({}, document.title, currentURL.split('?')[0]);
+        }
+      }
+
+      // Call the function when the page loads
+      window.onload = showAlertAndClearURL;
+
+    </script>
+  </body>
+</html>

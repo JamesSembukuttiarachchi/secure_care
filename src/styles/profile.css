@@ -1,0 +1,79 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(../images/background_h.jpg);
+}
+.details-container{
+    background-color: #ccc;
+    width: 500px;
+    height: 600px;
+    text-align: center;
+    margin-left: 100px;
+    border: 1px solid #000;
+    font-size: larger;
+}
+
+#profile_pic{
+    border-radius: 50%;
+    width: 200px;
+    height: 190px;
+    margin-top: 50px;
+}
+
+#appintments{
+    margin-left: 100px;
+}
+
+.change-pwd{
+    background-color: #ccc;
+    width: 500px;
+    height: 150px;
+    font-size: larger;
+    position: absolute;
+    top: 138px;
+    right: 300px;
+    border: 1px solid #000;
+    
+}
+
+form{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.delete{
+    background-color: #ccc;
+    width: 500px;
+    height: 160px;
+    font-size: larger;
+    position: absolute;
+    top: 355px;
+    right: 300px;
+    text-align: center;
+    border: 1px solid #000;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 7px 11px;
+    font-size: 16px;
+    border-radius: 29px;
+    cursor: pointer;
+    float: right;
+    margin-right: 220px;
+    margin-top: 10px;
+   
+}
+    
+button:hover {
+    background-color: #45a049;
+}
+
+button:focus {
+    box-shadow: 0 0 0 2px #4CAF50;
+}
+
+
+

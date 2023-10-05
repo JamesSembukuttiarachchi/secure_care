@@ -1,0 +1,217 @@
+body{
+    --primaryColor:rgb(185, 187, 189);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: var(--primaryColor);
+    background-image: url(../images/background_h.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+/*****Styling Form********/
+.formContainer{
+    text-align: center;
+    margin-left: 31%;
+    margin-right: 32%;
+    box-shadow: 0 0 15px 0 rgba(0,0,0,.2);
+    background-color: ghostwhite;
+    margin-bottom: 35px;
+    border-radius: 10px;
+}
+.formContainer input[type=text] {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(71, 71, 71);
+    border-radius: 0;
+    outline: none;
+    padding: 0;
+    height: 3rem;
+    font-size: 16px;
+    width: 100%;
+}
+.formContainer input[type=text]:focus{
+    border-bottom: 2px solid #289641;
+    border-bottom-style: groove;
+    outline: 0 none;
+}
+input[type=date]{
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgb(71, 71, 71);
+    border-radius: 0;
+    outline: none;
+    padding: 0;
+    height: 3rem;
+    font-size: 16px;
+    width: 100%;
+}
+input[type=date]:focus{
+    border-bottom: 2px solid #289641;
+    border-bottom-style: groove;
+    outline: 0 none;
+}
+
+.formContainer button{
+    --btn-color: #4CAF50;
+    --btn-text-color: #fff;
+    --btn-border-width: 1px;
+    --btn-border-color: #4CAF50;
+    cursor: pointer;
+    color: var(--btn-text-color);
+    background-color:var(--btn-color);
+	border: var(--border-width) solid var(--btn-border-color);
+    border-radius: 0.375rem;
+	padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    height: 36px;
+}
+.formContainer button:hover{
+    --btn-color: #1f9323;
+    --btn-border-color: #1f9323;
+    background-color: var(--btn-color);
+	border: var(--border-width) solid var(--btn-border-color);
+}
+
+/******Styling Button Icons*****/
+.iconSec{
+    background-color: aliceblue;
+}
+.priContainer{
+    display: flex;
+    text-align: center;
+    margin-left: 254px;
+}
+.box{
+    --border-color: #0d6efd;
+    height: 100%;
+    background: #fff;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 2px solid var(--border-color);
+    overflow: hidden;
+    padding: 4px 12px;
+    margin: 14px;
+    margin-left: 80px;
+}
+.box:hover{
+    --border-color: #0b5ed7;
+    border: 2px solid var(--border-color);
+    box-shadow: var(--border-color);
+    cursor: pointer;
+}
+.mText{
+    font-weight: 700;
+    margin: 0;
+    color: #555;
+    font-size: 16px;
+}
+.sText{
+    display: block;
+    margin: 0;
+    color: #555;
+    font-size: 13px;
+}
+.image{
+    height: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+}
+
+/*******styling image slider*********/
+
+.mySlides{
+    display: none;
+}
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    border-color: coral;
+    border-style: groove;
+    border-width: thick;
+    margin-top: 35px;
+}
+/* The dots*/
+.dotContainer{
+    text-align:center;
+    position: relative;
+    top: -30px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease-in-out;
+}
+.active {
+    background-color: #717171;
+}
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+@keyframes fade {
+    from {opacity: .5} 
+    to {opacity: 1}
+}
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {font-size: 11px}
+}
+
+.selectDoc{
+    border: 0;
+    border-bottom: 2px solid black;
+    background: transparent;
+    padding-right: 68px;
+    width: 100%;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+/*pop- up message box*/
+.customAlert {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+/*alert box styling*/
+.customAlertContent{
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.closeButton{
+    float: right;
+    cursor: pointer;
+}
+.hidden{
+    display: none;
+}
+.check-mark{
+    position: relative; 
+    right: -10px;
+}

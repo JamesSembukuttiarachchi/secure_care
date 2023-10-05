@@ -1,0 +1,117 @@
+/* creating Insurance Plans */
+
+create table inpatient_treatment(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+create table outpatient_treatment(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table basic_dental_services(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table major_dental_services(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table medical_assistance(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table additional_assistance(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+/* inserting data to the Insurance Planes tables */
+
+insert into inpatient_treatment values('Accommodation in a private or semi-private room','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Consultations (including pathology, radiology, computed tomography, magnetic resonance imaging, positron emission tomography and palliative medicine)','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Hospital charges, including operating theatres, intensive care wards and laboratories','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Surgery and anaesthetics','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Outpatient surgery instead of inpatient treatment','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Drugs and dressings','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Therapies, including medical massages, ergo therapy, light therapy, hydrotherapy, inhalation, packs, medical baths, cryotherapy, thermotherapy, electrotherapy','Unlimited','Limited','Limited');
+insert into inpatient_treatment values('Therapeutic aids and appliances','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Maternity care and childbirth, services of a midwife or obstetric nurse in the hospital','Limited','Limited','Unlimited');
+insert into inpatient_treatment values('Complications of pregnancy and childbirth','Limited','Limited','Unlimited');
+
+	
+insert into outpatient_treatment values('Consultations (including pathology, radiology, computed tomography, magnetic resonance imaging, positron emission tomography and palliative medicine)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into outpatient_treatment values('Chemotherapy, oncological drugs and treatment', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into outpatient_treatment values('Health Checks', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Maternity care and childbirth, services of a midwife or obstetric nurse', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Complications of pregnancy and childbirth', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Congenital conditions', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Acupuncture (needle technique), homeopathy, osteopathy, chiropractic, including drugs and dressings', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Speech therapy', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Psychiatric treatment', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Outpatient psychotherapy', 'Limited', 'Limited', 'Not Covered');
+
+
+insert into basic_dental_services values('Two preventive check-ups per insurance year', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('X-rays', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Scale-and-polish cleaning', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Treating oral mucosa and gingiva', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Simple fillings', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Surgery, extractions, root-canal treatment', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Night guard', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Accidental dental treatment', 'Unlimited', 'Unlimited', 'Not Covered');
+
+
+insert into major_dental_services values('Major dental services', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Dentures (for example, prostheses, bridges and crowns, inlays)', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Implants', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Orthodontic treatment (for children under 18)', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Dental laboratory work and materials', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Treatment plan', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Accidental dental treatment', 'Limited', 'Limited', 'Not Covered');
+
+
+insert into medical_assistance values('24-hour phone and email service with experienced counsellors, doctors and specialists', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Medical evacuation', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Information on medical infrastructure (local medical care and names and addresses of doctors who speak several languages)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support and information (by our medical service, second opinion, monitoring the course of the illness)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Guarantee of payment (GOP) (preparing for a stay in hospital)	', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Advance payment', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support and information on the nature, possible causes and possible treatment/ forms of therapy of an illness and for medical terms', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support in organising a “doctor-to-doctor” discussion', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Assistance in choosing the prescribed medication, comparable preparations and their side effects', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Medical support and advice prior to travelling (vaccinations, putting together a first-aid kit)', 'Unlimited', 'Unlimited', 'Unlimited');
+
+
+insert into additional_assistance values('Return travel to the country of residence', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Compassionate family visit', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Delayed return trip', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Getting hold of and shipping vital medication', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Return transport or care for children up to 18 years old', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Help with psychological problems possibly caused by the stay abroad', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Return of mortal remains', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Document storage (safe custody, help in getting replacements)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Organizing help if you have legal difficulties', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Arranging intercultural training (ex: information on local culture)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Arrangement of a relocation service', 'Unlimited', 'Unlimited', 'Unlimited');

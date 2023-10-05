@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Portal</title>
+        <link rel="stylesheet" href="styles/portalstyles.css">
+        <link rel="stylesheet" href="styles/header_footer_revise.css">
+        <script src="https://kit.fontawesome.com/c0ffbede71.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <!-- Logo image or text -->
+                <img src="images/logo.jpeg" alt="Logo" width="100" height="100" />
+            </div>
+    
+            <div class="navigation">
+                <ul>
+                    <!-- First row of navigation tabs -->
+                    <li><a class="active" href="Home.html">Home</a></li>
+                    <li><a href="channelDoctor.php">Medical Services</a></li>
+                    <li><a href="healthPlans.php">Insurance Plan</a></li>
+                    <li><a href="news.php">News</a></li>
+                    <li><a href="MedicalStore.php">Medical Store</a></li>
+                </ul>
+                <ul class="header_nav">
+                    <!-- Second row of navigation tabs -->
+                    <li><a href="patientlogin.html">Customer Portal</a></li>
+                    <li><a href="pay_online.html">Pay Online</a></li>
+                    <li><a href="contact_us.php">Contact Us</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="search-bar">
+                <!-- Search bar -->
+                <input type="text" placeholder="Search..." />
+                <button type="submit">Search</button>
+                <!--<button type="submit" class="sign">Sign Up/Login</button>-->
+                <button id="profile" name="profile" onclick="redirectToProfile()">
+                    <i class="fa-solid fa-user"></i> 
+                    <a href="handle_profile.php" style="text-decoration: none;">Profile</a>
+                </button>
+            </div>
+    
+            <div style="clear: both;"></div> <!-- Clear float -->
+        </header>
+        
+        <h1 id="patient_name" class="mTitle">Patient's Portal</h1>
+        <div class="mBox">
+            <div class="box1" style="padding-right: 61px;">
+                <h2 class="bTitle" style="position: relative; left: -10px;">Protection</h2>
+                <h1 class="price">53,000 LKR</h1>
+                <p class="Ddate">As at <span id="display-date" onclick="getCurrentDate()"></span> </p>
+                <div class="btnLayout">
+                    <div class="btn1">
+                        <button class="page-button" onclick="location.href='payment_portal.html'">Pay Now</button>
+                    </div>
+                    <div class="btn2">
+                        <button class="page-button" onclick="location.href='policydetails.html'">Policy Details</button>
+                    </div>
+                    <div class="btn3">
+                        <button class="page-button" onclick="showDialog()">Change Phone Number</button>
+                    </div>
+                    <br /><br /><br /><br />
+
+                    <!-- Hidden dialog box -->
+                    <div id="dialogBox" style="display: none;">
+                        <label for="inputValue">Enter a 10-digit number:</label>
+                        <input type="text" id="inputValue">
+                        <button  onclick="validateAndSubmit()">OK</button>
+                    </div>
+
+                    <!-- Form to submit the value to PHP script -->
+                    <form id="myForm" action="change_phone_number.php" method="POST">
+                        <input type="hidden" name="numberValue" id="numberValue">
+                    </form>
+                </div>
+            </div>
+            <div class="box2" style="display: flex; flex-direction: column;">
+               <div style="display: block;">
+                <h2 class="bTitle">My Pending Claims</h2>
+                <h1 id="no_of_claims">0</h1>
+                <button class="page-button" onclick="track_claims()">Track my Claims</button>
+               </div>
+               <div style="display: block;">
+                <h2 class="conTact"><a href="contact_us.php">Contact Us</a></h2>
+                <table>
+                    <tr>
+                        <td><i class="fa fa-facebook-official"></i></td>
+                        <td><i class="fa fa-instagram"></i></td>
+                        <td><i class="fa fa-twitter"></i></td>
+                        <td><i class="fa fa-google-plus-square"></i></td>
+                    </tr>
+                </table>
+               </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="images/logo.jpeg" alt="Logo" style="width: 100px; height: 100px;" />
+                    <p>"SecureCare: Your Health, Our Priority"</p>
+                </div>
+                <div class="col">
+                    <h3>Links</h3>
+                    
+                    <div class="footer-link-buttons">
+                        <div><a href="contact_us.php">Contact Us</a></div>
+                        <div><a href="">Terms & Conditions</a></div>
+                        <div><a href="">Privacy & Cookies Policy</a></div>
+                        <div><a href="faq.html">FAQ's</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Newsletter</h3>
+                    <form action="newsletter.php" method="post" id="newsletterForm">
+                        <div style="width: 88%; margin-top: 10px;">
+                            <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                        </div>
+    
+                        <div>
+                            <button id="subscribeButton" name="submit" value="subscribe">Subscribe</button>
+                            <button id="unsubscribeButton" name="submit" value="unsubscribe">Unsubscribe</button>
+                            <button type="button" id="updateButton" name="submit" value="update">Update</button>
+                        </div>
+    
+                        <div class="social-icons">
+                            <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="www.dribble.com"><i class="fa-brands fa-dribbble"></i></a>
+                        </div>
+    
+                        <!-- Hidden dialog box -->
+                        <div id="changeEmail" style="display: none;">
+                            <input type="email" id="oldEmailInput" name="old_email" placeholder="Old Email">
+                            <button type="submit" name="confirm_update" onclick="validateAndSubmit()">OK</button>
+                        </div>
+    
+                        <script>
+                            function showChangeEmail(event) {
+                                event.preventDefault(); // Prevent form submission
+    
+                                document.getElementById("emailInput").placeholder = "New Email";
+                                document.getElementById("subscribeButton").style.display = "none";
+                                document.getElementById("unsubscribeButton").style.display = "none";
+                                document.getElementById("updateButton").style.display = "none";
+                                document.getElementById("changeEmail").style.display = "block";
+                            }
+    
+                            function validateAndSubmit(event) {
+                                event.preventDefault(); // Prevent form submission
+    
+                                var oldEmail = document.getElementById("oldEmailInput").value;
+                                var newEmail = document.getElementById("emailInput").value;
+    
+                                if (oldEmail && newEmail) {
+                                    document.getElementById("newsletterForm").submit(); // Submit the form
+                                }
+                            }
+    
+                            document.getElementById('updateButton').addEventListener('click', showChangeEmail);
+                        </script>
+                    </form>
+                </div>
+            </div>
+            
+            <div><p class="copyright">&copy 2023 All rights reserved.</p></div>
+            
+        </footer>
+
+        <script>
+            //getting a random value between 0 and 3
+            var claims_value = Math.floor(Math.random() * (3 - 0)) + 0;
+            document.getElementById("no_of_claims").innerHTML = claims_value;
+
+            function getCurrentDate(){
+                let date;
+                let dateTime;
+                date = new Date;
+                dateTime = date.toISOString().split("T")[0];    //converting the date to a string
+                document.querySelector("#display-date").textContent = dateTime;
+            }
+            getCurrentDate()
+
+            // Get the value of the 'user' query parameter from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const user = urlParams.get('user');
+
+            // Update the inner HTML of the h1 element with the user value
+            var text = user + "'s Portal";
+            document.getElementById("patient_name").innerHTML = text;
+
+            function track_claims() {
+                window.location.href = "trackmyclaims.php?claims_value=" + encodeURIComponent(claims_value);
+            }
+
+            function showDialog() {
+                var dialogBox = document.getElementById('dialogBox');
+                dialogBox.style.display = 'block';
+            }
+
+            function validateAndSubmit() {
+                var inputValue = document.getElementById('inputValue').value;
+
+                // Validate input
+                var numberRegex = /^\d{10}$/;
+                if (!numberRegex.test(inputValue)) {
+                    alert('Invalid input! Please enter a 10-digit number.');
+                    return;
+                }
+
+                // Set the value and submit the form
+                document.getElementById('numberValue').value = inputValue;
+                document.getElementById('myForm').submit();
+            }
+
+        </script>
+    </body>
+</html>

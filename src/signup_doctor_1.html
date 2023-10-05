@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Signup - Doctor</title>
+    <link rel="stylesheet" type="text/css" href="styles/login_signup.css"/>
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <form id="signup_form" action="signup.php" method="POST">
+            <center><h1>Signup - Doctor</h1></center>
+            <select name="specialization" id="specialization">
+                <option value="default"> - Specialization - </option>
+                <option value="sp_0">Specialization 0</option>
+                <option value="sp_1">Specialization 1</option>
+                <option value="sp_2">Specialization 2</option>
+            </select><br /><br />
+            <input type="text" id="hospital" name="hospital" placeholder=" Affiliated Hospital" required /><br /><br />
+            <input type="text" id="contact_number" name="contact_number" size="10" placeholder=" Contact Number" /><br /><br />
+            <input type="text" id="din" name="din" placeholder=" DIN (Doctor's Index Number)" required /><br /><br />
+            <textarea id="_address" name="_address" rows="4" placeholder=" Address" required></textarea><br /><br />
+            <input type="hidden" name="hiddenField" value="hiddenValue">
+            <input type="submit" id="next" name="next" value="Signup" style="margin-bottom: 50px;" /><br /><br />
+        </form>
+    </main>
+</body>
+</html>

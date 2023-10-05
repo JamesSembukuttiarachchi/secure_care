@@ -1,0 +1,354 @@
+create table patient(
+    patient_id int AUTO_INCREMENT,
+    username varchar(30),
+    _password varchar(30),
+    first_name varchar(30),
+    last_name varchar(30),
+    email varchar(30),
+    age int,
+    gender ENUM('male', 'female'),
+    contact_number varchar(10),
+    _address varchar(150),
+    PRIMARY KEY (patient_id)
+);
+
+/* Values for the patient table */
+INSERT INTO patient (username, _password, first_name, last_name, email, age, gender, contact_number, _address)
+VALUES ('john85', 'pass123', 'John', 'Doe', 'johndoe@example.com', 35, 'male', '1234567890', '123 Main St');
+
+INSERT INTO patient (username, _password, first_name, last_name, email, age, gender, contact_number, _address)
+VALUES ('alice92', 'securepwd', 'Alice', 'Johnson', 'alice.johnson@example.com', 28, 'female', '9876543210', '456 Elm St');
+
+INSERT INTO patient (username, _password, first_name, last_name, email, age, gender, contact_number, _address)
+VALUES ('mike78', 'mypass456', 'Mike', 'Smith', 'mikesmith@example.com', 45, 'male', '2345678901', '789 Oak Ave');
+
+INSERT INTO patient (username, _password, first_name, last_name, email, age, gender, contact_number, _address)
+VALUES ('sarah99', 'pass123', 'Sarah', 'Williams', 'sarahwilliams@example.com', 31, 'female', '3456789012', '567 Pine St');
+
+INSERT INTO patient (username, _password, first_name, last_name, email, age, gender, contact_number, _address)
+VALUES ('david80', 'davidpass', 'David', 'Taylor', 'david.taylor@example.com', 52, 'male', '4567890123', '901 Maple Rd');
+
+
+create table doctor(
+    doctor_id int AUTO_INCREMENT,
+    username varchar(30),
+    _password varchar(30),
+    first_name varchar(30),
+    last_name varchar(30),
+    email varchar(30),
+    DIN int,
+    specialization ENUM('sp_0', 'sp_1', 'sp_2'),
+    hospital varchar(30),
+    contact_number varchar(10),
+    _address varchar(150),
+    PRIMARY KEY (doctor_id)
+);
+
+/* Values for the doctor table */
+INSERT INTO doctor (username, _password, first_name, last_name, email, DIN, specialization, hospital, contact_number, _address)
+VALUES ('drsmith', 'doctorpass', 'John', 'Smith', 'drsmith@example.com', 123456, 'sp_0', 'General Hospital', '1234567890', '123 Main St');
+
+INSERT INTO doctor (username, _password, first_name, last_name, email, DIN, specialization, hospital, contact_number, _address)
+VALUES ('drjones', 'pass456', 'Emily', 'Jones', 'drjones@example.com', 654321, 'sp_1', 'City Medical Center', '9876543210', '456 Elm St');
+
+INSERT INTO doctor (username, _password, first_name, last_name, email, DIN, specialization, hospital, contact_number, _address)
+VALUES ('drwilson', 'wilsonpass', 'Michael', 'Wilson', 'drwilson@example.com', 987654, 'sp_2', 'Community Clinic', '2345678901', '789 Oak Ave');
+
+INSERT INTO doctor (username, _password, first_name, last_name, email, DIN, specialization, hospital, contact_number, _address)
+VALUES ('drbrown', 'pass123', 'Jennifer', 'Brown', 'drbrown@example.com', 345678, 'sp_0', 'Central Hospital', '3456789012', '567 Pine St');
+
+INSERT INTO doctor (username, _password, first_name, last_name, email, DIN, specialization, hospital, contact_number, _address)
+VALUES ('drdavis', 'davispass', 'Matthew', 'Davis', 'drdavis@example.com', 876543, 'sp_1', 'Metropolitan Medical', '4567890123', '901 Maple Rd');
+
+
+create table insurance_agent(
+    employee_id int AUTO_INCREMENT,
+    company_reg_no varchar(10),
+    company_name varchar(30),
+    company_email varchar(30),
+    first_name varchar(30),
+    last_name varchar(30),
+    contact_number varchar(10),
+    branch ENUM ('branch_0', 'branch_1'),
+    username varchar(30),
+    _password varchar(30),
+    PRIMARY KEY (employee_id)
+);
+
+/* Values for the insurance_agent */
+INSERT INTO insurance_agent (company_reg_no, company_name, company_email, first_name, last_name, contact_number, branch, username, _password)
+VALUES ('1001', 'ABC Insurance', 'abc@example.com', 'John', 'Doe', '1234567890', 'branch_0', 'agentjohn', 'agentpass');
+
+INSERT INTO insurance_agent (company_reg_no, company_name, company_email, first_name, last_name, contact_number, branch, username, _password)
+VALUES ('1002', 'XYZ Insurance', 'xyz@example.com', 'Alice', 'Johnson', '9876543210', 'branch_1', 'agentalice', 'secureagent');
+
+INSERT INTO insurance_agent (company_reg_no, company_name, company_email, first_name, last_name, contact_number, branch, username, _password)
+VALUES ('1003', 'PQR Insurance', 'pqr@example.com', 'Mike', 'Smith', '2345678901', 'branch_0', 'agentmike', 'agentpass456');
+
+INSERT INTO insurance_agent (company_reg_no, company_name, company_email, first_name, last_name, contact_number, branch, username, _password)
+VALUES ('1004', 'LMN Insurance', 'lmn@example.com', 'Sarah', 'Williams', '3456789012', 'branch_1', 'agentsarah', 'agent123');
+
+INSERT INTO insurance_agent (company_reg_no, company_name, company_email, first_name, last_name, contact_number, branch, username, _password)
+VALUES ('1005', 'JKL Insurance', 'jkl@example.com', 'David', 'Taylor', '4567890123', 'branch_0', 'agentdavid', 'davidagent');
+
+
+create table healthcare_provider(
+    company_reg_no varchar(10),
+    company_name varchar(30),
+    company_email varchar(30),
+    username varchar(30),
+    _password varchar(30),
+    PRIMARY KEY (company_reg_no)
+);
+
+/* Values for the healthcare_provider */
+INSERT INTO healthcare_provider (company_reg_no, company_name, company_email, username, _password)
+VALUES ('2001', 'ABC Healthcare', 'abc@example.com', 'provider1', 'providerpass');
+
+INSERT INTO healthcare_provider (company_reg_no, company_name, company_email, username, _password)
+VALUES ('2002', 'XYZ Healthcare', 'xyz@example.com', 'provider2', 'provider123');
+
+INSERT INTO healthcare_provider (company_reg_no, company_name, company_email, username, _password)
+VALUES ('2003', 'PQR Healthcare', 'pqr@example.com', 'provider3', 'providerpass');
+
+INSERT INTO healthcare_provider (company_reg_no, company_name, company_email, username, _password)
+VALUES ('2004', 'LMN Healthcare', 'lmn@example.com', 'provider4', 'providerpass');
+
+INSERT INTO healthcare_provider (company_reg_no, company_name, company_email, username, _password)
+VALUES ('2005', 'JKL Healthcare', 'jkl@example.com', 'provider5', 'providerpass');
+
+
+create table broker(
+    broker_id int AUTO_INCREMENT,
+    username varchar(30),
+    _password varchar(30),
+    email varchar(30),
+    first_name varchar(30),
+    last_name varchar(30),
+    contact_number varchar(10),
+    age int,
+    _address varchar(150),
+    PRIMARY KEY (broker_id)
+);
+
+/* Values for the broker */
+INSERT INTO broker (username, _password, email, first_name, last_name, contact_number, age, _address)
+VALUES ('brokerjohn', 'brokerpass', 'john@example.com', 'John', 'Doe', '1234567890', 35, '123 Main St');
+
+INSERT INTO broker (username, _password, email, first_name, last_name, contact_number, age, _address)
+VALUES ('brokeralice', 'broker123', 'alice@example.com', 'Alice', 'Johnson', '9876543210', 28, '456 Elm St');
+
+INSERT INTO broker (username, _password, email, first_name, last_name, contact_number, age, _address)
+VALUES ('brokermike', 'mikebroker', 'mike@example.com', 'Mike', 'Smith', '2345678901', 45, '789 Oak Ave');
+
+INSERT INTO broker (username, _password, email, first_name, last_name, contact_number, age, _address)
+VALUES ('brokersarah', 'brokerpass', 'sarah@example.com', 'Sarah', 'Williams', '3456789012', 31, '567 Pine St');
+
+INSERT INTO broker (username, _password, email, first_name, last_name, contact_number, age, _address)
+VALUES ('brokerdavid', 'davidbroker', 'david@example.com', 'David', 'Taylor', '4567890123', 52, '901 Maple Rd');
+
+
+create table faq(
+    qid int AUTO_INCREMENT,
+    userid varchar(10),
+    question varchar(5000),
+    PRIMARY KEY (qid)
+);
+
+create table claims(
+    claim_id int AUTO_INCREMENT,
+    status ENUM ('In Progress', 'Pending', 'Resolved'),
+    submitted_date date,
+    resolved_date date,
+    PRIMARY KEY (claim_id)
+);
+
+/* Values for the claims table */
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('In Progress', '2023-05-01', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Pending', '2023-05-02', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Resolved', '2023-05-03', '2023-05-05');
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('In Progress', '2023-05-04', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Pending', '2023-05-05', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Resolved', '2023-05-06', '2023-05-08');
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('In Progress', '2023-05-07', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Pending', '2023-05-08', NULL);
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('Resolved', '2023-05-09', '2023-05-12');
+INSERT INTO claims (status, submitted_date, resolved_date) VALUES ('In Progress', '2023-05-10', NULL);
+
+CREATE TABLE contact_us(
+    role varchar(30),
+    user_id int,
+    message varchar(5000)
+);
+
+INSERT INTO contact_us (role, user_id, message) VALUES ('patient', 12345, 'I have a question about my recent lab results.');
+INSERT INTO contact_us (role, user_id, message) VALUES ('doctor', 98765, "Please provide me with the patient's medical history.");
+INSERT INTO contact_us (role, user_id, message) VALUES ('insurance_agent', 54321, 'I need assistance with a claim for a policyholder.');
+INSERT INTO contact_us (role, user_id, message) VALUES ('healthcare_provider', 24680, 'I have a billing inquiry for the services rendered.');
+INSERT INTO contact_us (role, user_id, message) VALUES ('broker', 13579, 'I am interested in enrolling in your healthcare network.');
+
+CREATE TABLE medical_store(
+    item_no int AUTO_INCREMENT,
+    item_name varchar(50),
+    price float,
+    item_img_link varchar(100),
+    PRIMARY KEY (item_no)
+);
+
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine A', 10.99, 'medicine1.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine B', 15.99, 'medicine2.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine C', 5.99, 'medicine3.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine D', 8.99, 'medicine4.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine E', 12.99, 'medicine5.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine F', 6.99, 'medicine6.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine G', 9.99, 'medicine7.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine H', 14.99, 'medicine8.jpg');
+INSERT INTO medical_store (item_name, price, item_img_link) VALUES ('Medicine I', 7.99, 'medicine9.jpg');
+
+
+CREATE TABLE newsletter(
+    news_id int AUTO_INCREMENT,
+    email varchar(50),
+    PRIMARY KEY (news_id)
+);
+
+CREATE TABLE appointments (
+    appointment_id int AUTO_INCREMENT,
+    patient_id int,
+    doctor_name varchar(50),
+    hospital_name varchar(50),
+    specialization varchar(50),
+    appointment_date date,
+    appointment_time time,
+    status boolean DEFAULT TRUE,
+	PRIMARY KEY(appointment_id)
+);
+
+create table news(
+    newsid int AUTO_INCREMENT,
+    news varchar(5000),
+    inserted_date date,
+    valid_days int,
+    img_link varchar(50),
+    PRIMARY KEY(newsid)
+);
+
+/* creating Insurance Plans */
+
+create table inpatient_treatment(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+create table outpatient_treatment(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table basic_dental_services(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table major_dental_services(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table medical_assistance(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+create table additional_assistance(
+	description varchar(200),
+	exclusive varchar(20),
+	special varchar(20),
+	essential varchar(20)
+);
+
+
+/* inserting data to the Insurance Planes tables */
+
+insert into inpatient_treatment values('Accommodation in a private or semi-private room','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Consultations (including pathology, radiology, computed tomography, magnetic resonance imaging, positron emission tomography and palliative medicine)','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Hospital charges, including operating theatres, intensive care wards and laboratories','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Surgery and anaesthetics','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Outpatient surgery instead of inpatient treatment','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Drugs and dressings','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Therapies, including medical massages, ergo therapy, light therapy, hydrotherapy, inhalation, packs, medical baths, cryotherapy, thermotherapy, electrotherapy','Unlimited','Limited','Limited');
+insert into inpatient_treatment values('Therapeutic aids and appliances','Unlimited','Unlimited','Unlimited');
+insert into inpatient_treatment values('Maternity care and childbirth, services of a midwife or obstetric nurse in the hospital','Limited','Limited','Unlimited');
+insert into inpatient_treatment values('Complications of pregnancy and childbirth','Limited','Limited','Unlimited');
+
+	
+insert into outpatient_treatment values('Consultations (including pathology, radiology, computed tomography, magnetic resonance imaging, positron emission tomography and palliative medicine)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into outpatient_treatment values('Chemotherapy, oncological drugs and treatment', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into outpatient_treatment values('Health Checks', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Maternity care and childbirth, services of a midwife or obstetric nurse', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Complications of pregnancy and childbirth', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Congenital conditions', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Acupuncture (needle technique), homeopathy, osteopathy, chiropractic, including drugs and dressings', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Speech therapy', 'Limited', 'Limited', 'Not Covered');
+insert into outpatient_treatment values('Psychiatric treatment', 'Limited', 'Limited', 'Limited');
+insert into outpatient_treatment values('Outpatient psychotherapy', 'Limited', 'Limited', 'Not Covered');
+
+
+insert into basic_dental_services values('Two preventive check-ups per insurance year', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('X-rays', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Scale-and-polish cleaning', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Treating oral mucosa and gingiva', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Simple fillings', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Surgery, extractions, root-canal treatment', 'Unlimited', 'Unlimited', 'Limited');
+insert into basic_dental_services values('Night guard', 'Unlimited', 'Unlimited', 'Not Covered');
+insert into basic_dental_services values('Accidental dental treatment', 'Unlimited', 'Unlimited', 'Not Covered');
+
+
+insert into major_dental_services values('Major dental services', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Dentures (for example, prostheses, bridges and crowns, inlays)', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Implants', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Orthodontic treatment (for children under 18)', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Dental laboratory work and materials', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Treatment plan', 'Limited', 'Limited', 'Not Covered');
+insert into major_dental_services values('Accidental dental treatment', 'Limited', 'Limited', 'Not Covered');
+
+
+insert into medical_assistance values('24-hour phone and email service with experienced counsellors, doctors and specialists', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Medical evacuation', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Information on medical infrastructure (local medical care and names and addresses of doctors who speak several languages)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support and information (by our medical service, second opinion, monitoring the course of the illness)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Guarantee of payment (GOP) (preparing for a stay in hospital)	', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Advance payment', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support and information on the nature, possible causes and possible treatment/ forms of therapy of an illness and for medical terms', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Support in organising a “doctor-to-doctor” discussion', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Assistance in choosing the prescribed medication, comparable preparations and their side effects', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into medical_assistance values('Medical support and advice prior to travelling (vaccinations, putting together a first-aid kit)', 'Unlimited', 'Unlimited', 'Unlimited');
+
+
+insert into additional_assistance values('Return travel to the country of residence', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Compassionate family visit', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Delayed return trip', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Getting hold of and shipping vital medication', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Return transport or care for children up to 18 years old', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Help with psychological problems possibly caused by the stay abroad', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Return of mortal remains', 'Limited', 'Limited', 'Limited');
+insert into additional_assistance values('Document storage (safe custody, help in getting replacements)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Organizing help if you have legal difficulties', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Arranging intercultural training (ex: information on local culture)', 'Unlimited', 'Unlimited', 'Unlimited');
+insert into additional_assistance values('Arrangement of a relocation service', 'Unlimited', 'Unlimited', 'Unlimited');
+
+

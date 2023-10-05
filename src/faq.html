@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FAQ</title>
+  <link rel="stylesheet" href="styles/faqstyles.css">
+  <link rel="stylesheet" href="styles/header_footer_revise.css">
+  <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+  <script src="https://kit.fontawesome.com/c0ffbede71.js"></script>
+
+  <script>
+    function toggleAnswer(element) {
+      var answer = element.nextElementSibling;
+      if (answer.style.display === "none") {
+        answer.style.display = "block";
+      } else {
+        answer.style.display = "none";
+      }
+    }
+  </script>
+
+</head>
+<body>
+  <header>
+    <div class="logo">
+        <!-- Logo image or text -->
+        <img src="images/logo.jpeg" alt="Logo" width="100" height="100" />
+    </div>
+
+    <div class="navigation">
+        <ul>
+            <!-- First row of navigation tabs -->
+            <li><a class="active" href="Home.html">Home</a></li>
+            <li><a href="channelDoctor.php">Medical Services</a></li>
+            <li><a href="healthPlans.php">Insurance Plan</a></li>
+            <li><a href="news.php">News</a></li>
+            <li><a href="MedicalStore.php">Medical Store</a></li>
+        </ul>
+        <ul class="header_nav">
+            <!-- Second row of navigation tabs -->
+            <li><a href="patientlogin.html">Customer Portal</a></li>
+            <li><a href="pay_online.html">Pay Online</a></li>
+            <li><a href="contact_us.php">Contact Us</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+        </ul>
+    </div>
+
+    <div class="search-bar">
+        <!-- Search bar -->
+        <input type="text" placeholder="Search..." />
+        <button type="submit">Search</button>
+        <!--<button type="submit" class="sign">Sign Up/Login</button>-->
+        <button id="profile" name="profile" onclick="redirectToProfile()">
+            <i class="fa-solid fa-user"></i> 
+            <a href="handle_profile.php" style="text-decoration: none;">Profile</a>
+        </button>
+    </div>
+
+    <div style="clear: both;"></div> <!-- Clear float -->
+</header>
+  <div class="tt">
+    <div class="container">
+      <h1>FAQ</h1>
+      <h3 style="font-family: cursive;">Welcome to our FAQ page!</h3>
+      <h4>
+          "Whether you're a new visitor or a returning customer, we understand that you may have queries, and we're here to assist you every step of the way.
+          If you don't find the answer you're looking for, please don't hesitate to reach out to our dedicated customer support team, who will be delighted to assist you further..."
+      </h4>
+      <div class="question">
+        <h3 onclick="toggleAnswer(this)">How Insurance can help me?</h3>
+        <div class="answer">
+          <p>Life's many uncertainties bring about many unwelcome and unexpected events. Tragedy and disaster strike when we least expect them to, often creating havoc in the lives of the affected and destroying their lifestyle and peace of mind earlier enjoyed.
+             When such unexpected losses occur, families and businesses undergo many hardships stemming from the loss of income. So it follows that the answer to a life relatively devoid of anxiety would be to transfer the risk to someone willing to absorb it. 
+             This is where insurers like (###) come in. 
+             In return for a small premium a very small amount when compared with the potential loss, the cost of that loss is transferred to the insurer.</p>
+        </div>
+      </div>
+      <div class="question">
+        <h3 onclick="toggleAnswer(this)">How can I get a quotation for the policy I'm interested in?</h3>
+        <div class="answer">
+          <p>We give you several options. You could either call us or visit us at either our Central Office or at any of our branches around Sri Lanka, or we could have our representative call on you at your convenience.</p>
+        </div>
+      </div>
+      <div class="question">
+        <h3 onclick="toggleAnswer(this)">How do I determine the coverage amount?</h3>
+        <div class="answer">
+          <p>For Life Insurance, the amount to be insured relates to your future earning capacity and your liabilities. 
+             For property insurance, this amount is determined by the market value of the property. 
+             Just call on us. We will advise you on how to arrive at the most equitable figure.</p>
+        </div>
+      </div>
+      <div class="question">
+        <h3 onclick="toggleAnswer(this)">How can I make a Claim?</h3>
+        <div class="answer">
+          <p>In the event of a claim, you can contact our claims department via phone or email. 
+             Our representatives will guide you through the claims process, assist with documentation requirements, and help you with any questions or concerns you may have.</p>
+        </div>
+      </div>
+      <div class="question">
+          <h3 onclick="toggleAnswer(this)">Can I make changes to my policy?</h3>
+          <div class="answer">
+            <p>Yes, you can make changes to your policy. 
+              Whether you need to update your contact information, add or remove a person, or adjust your coverage limits, you can contact our customer service team, and they will assist you with the necessary changes..</p>
+          </div>
+      </div>
+      <div class="question">
+          <h3 onclick="toggleAnswer(this)">How can I contact customer support?</h3>
+          <div class="answer">
+            <p>You can contact our customer support team by calling our Hotline number or sending an email to support@example.com.</p>
+          </div>
+      </div>
+    </div>
+    <div class="container2">
+      <h2> <center>Any Questions ?</center></h2>
+      <img class="faqimage" src="images/faqimage.jpg" alt="">
+      <form action="faq.php" method="post" id="faqForm">
+          <label for="question"></label>
+          <div class="quessubmit">
+              <textarea name="question" id="questionTextarea" cols="30" rows="10"></textarea>
+              <input type="submit" value="Ask" id="askBtn">
+          </div>
+          <div class="remove_btn">
+              <button type="submit" id="removeBtn" name="remove">Remove</button>
+          </div>
+      </form>
+      <script>
+          //workd the event in the form
+          document.getElementById("faqForm").addEventListener("submit", function (event) {
+              var askBtn = document.getElementById("askBtn");
+              var questionTextarea = document.getElementById("questionTextarea");
+
+              // Check if the "Ask" button was clicked
+              if (event.submitter === askBtn) {           //triggering the button (submitter)
+                  // Check if the question textarea is empty
+                  if (questionTextarea.value.trim() === "") {
+                      // Prevent form submission if the textarea is empty
+                      event.preventDefault();             //preventing the default action which is the php action
+                      alert("Please enter a question.");
+                  }
+              }
+          });
+      </script>
+    </div>
+  </div>
+  <footer>
+    <div class="row">
+        <div class="col">
+            <img src="images/logo.jpeg" alt="Logo" style="width: 100px; height: 100px;" />
+            <p>"SecureCare: Your Health, Our Priority"</p>
+        </div>
+        <div class="col">
+            <h3>Links</h3>
+            
+            <div class="footer-link-buttons">
+                <div><a href="contact_us.php">Contact Us</a></div>
+                <div><a href="">Terms & Conditions</a></div>
+                <div><a href="">Privacy & Cookies Policy</a></div>
+                <div><a href="faq.html">FAQ's</a></div>
+            </div>
+        </div>
+        <div class="col">
+            <h3>Newsletter</h3>
+            <form action="newsletter.php" method="post" id="newsletterForm">
+                <div style="width: 88%; margin-top: 10px;">
+                    <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div>
+                    <button id="subscribeButton" name="submit" value="subscribe">Subscribe</button>
+                    <button id="unsubscribeButton" name="submit" value="unsubscribe">Unsubscribe</button>
+                    <button type="button" id="updateButton" name="submit" value="update">Update</button>
+                </div>
+
+                <div class="social-icons">
+                    <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="www.dribble.com"><i class="fa-brands fa-dribbble"></i></a>
+                </div>
+
+                <!-- Hidden dialog box -->
+                <div id="changeEmail" style="display: none;">
+                    <input type="email" id="oldEmailInput" name="old_email" placeholder="Old Email">
+                    <button type="submit" name="confirm_update" onclick="validateAndSubmit()">OK</button>
+                </div>
+
+                <script>
+                    function showChangeEmail(event) {
+                        event.preventDefault(); // Prevent form submission
+
+                        document.getElementById("emailInput").placeholder = "New Email";
+                        document.getElementById("subscribeButton").style.display = "none";
+                        document.getElementById("unsubscribeButton").style.display = "none";
+                        document.getElementById("updateButton").style.display = "none";
+                        document.getElementById("changeEmail").style.display = "block";
+                    }
+
+                    function validateAndSubmit(event) {
+                        event.preventDefault(); // Prevent form submission
+
+                        var oldEmail = document.getElementById("oldEmailInput").value;
+                        var newEmail = document.getElementById("emailInput").value;
+
+                        if (oldEmail && newEmail) {
+                            document.getElementById("newsletterForm").submit(); // Submit the form
+                        }
+                    }
+
+                    document.getElementById('updateButton').addEventListener('click', showChangeEmail);
+                </script>
+            </form>
+
+        </div>
+    </div>
+        
+    
+    <div><p class="copyright">&copy 2023 All rights reserved.</p></div>
+    
+</footer>
+
+</body>
+</html>

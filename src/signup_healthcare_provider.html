@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Signup - Healthcare Provider</title>
+    <link rel="stylesheet" type="text/css" href="styles/login_signup.css"/>
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <form id="signup_form" action="signup.php" method="POST">
+            <center><h1>Signup - Healthcare Provider</h1></center>
+            <input type="text" id="company_name" name="company_name" placeholder=" Company Name" required /><br /><br />
+            <input type="email" id="company_email" name="company_email" placeholder=" Company Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br /><br />
+            <input type="text" id="company_reg_no" name="company_reg_no" placeholder=" Company Registration Number" required /><br /><br />
+            <input type="text" id="user" name="user" placeholder=" Username" required /><br /><br />
+            <input type="password" id="_password" name="_password" placeholder=" Password"
+                   pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one  number
+                   and one uppercase and lowercase letter, and at least 8 or more characters" required /><br /><br />
+            <input type="password" id="re_password" name="re_password" placeholder=" Confirm Password" required /><br /><br />
+            <input type="hidden" name="hiddenField" value="hiddenValue">
+            <input type="submit" id="next" name="next" value="Signup" style="margin-bottom: 50px;" /><br /><br />
+        </form>
+    </main>
+</body>
+</html>

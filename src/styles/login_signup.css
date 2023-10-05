@@ -1,0 +1,101 @@
+﻿body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url(../images/background_h.jpg);
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form{
+    background-color: white;
+    margin-top: 30px;
+    padding: 30px 0px 30px 0px;
+    border: 1px groove darkgray;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 0 rgb(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+input:not(input[type=checkbox], input[type=submit]){
+    width: 360px;
+    height: 30px;
+}
+
+select{
+    width: 366px;
+    height: 30px;
+}
+
+textarea{
+    width: 360px;
+    height: auto;
+}
+
+h1{
+    margin-bottom: 100px;
+}
+
+input[type=checkbox] {
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin-right: 0; 
+    margin-left: 17px;
+    accent-color: #4CAF50;
+    color: white;
+}
+
+input[type=chcekbox]:checked{
+    accent-color: #4CAF50;
+}
+
+label[for=save_details], label[for=terms] {
+    float: left;
+    margin-left: 5px;
+    margin-top: 8px;
+}
+
+input[type=submit] {
+    cursor: pointer;
+    height: 40px;
+    width: 120px;
+    float: right;
+    margin-right: 15px;
+    border-radius: 4px;
+    border: none;
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+input[type=submit]:hover{
+    background-color: #1f9323;
+    border-color: #1f9323;
+}
+
+#facebook{
+    cursor: pointer;
+    margin-top: 100px;
+    background-image: url(../images/facebook.png);
+    background-repeat: no-repeat;
+    background-color: inherit;
+    color: white;
+    border: none;
+    height: 53px;
+    width: 328px;
+}
+
+#google {
+    cursor: pointer;
+    margin-top: 10px;
+    background-image: url(../images/google.png);
+    background-repeat: no-repeat;
+    background-color: inherit;
+    color: white;
+    border: none;
+    height: 53px;
+    width: 328px;
+}

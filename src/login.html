@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>SecureCare Login</title>
+    <link rel="stylesheet" type="text/css" href="styles/login_signup.css" />
+    <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <form id="login_form" action="authentication.php" method="post">
+            <center><h1>Login</h1></center>
+            <select name="select_role" id="select_role" placeholder=" - Select Your Role - " required>
+                <option value="patient">Patient</option>
+                <option value="doctor">Doctor</option>
+                <option value="insurance_agent">Insurance Agent</option>
+                <option value="healthcare_provider">Healthcare Provider</option>
+                <option value="broker">Broker</option>
+            </select><br /><br />
+            <input type="text" id="user" name="user" placeholder="Username" /><br /><br />
+            <input type="password" id="_password" name="_password" placeholder="Password" /><br /><br />
+            <input type="checkbox" id="save_details" name="save_details" />
+            <label for="save_details">Remember Me</label>
+            <input type="submit" id="submit" name="submit" value="Login" /><br /><br /><br /><br />
+            <div id="signup_from_signin" style="align-items: center;">
+                <label for="sigunp">Don't Have an account ?</label>
+                <a href="signup.html">Signup now.</a>
+            </div>
+            <input type="button" id="facebook" name="facebook" value="Login with Facebook" style="margin-top: 50px;" />
+            <input type="button" id="google" name="google" value="Login with Google" />
+        </form>
+    </main>
+    <script src="scripts/onclick.js"></script>
+</body>
+</html>

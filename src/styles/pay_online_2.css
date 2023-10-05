@@ -1,0 +1,58 @@
+body{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url(../images/background_h.jpg);
+  margin: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 7px 11px;
+  font-size: 16px;
+  border-radius: 29px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  box-shadow: 0 0 0 2px #4CAF50;
+}
+
+.form-container {
+  display: grid;                                
+  grid-template-rows: repeat(2,1fr);
+  margin: 0px 535px;
+  width: 30%;
+  justify-content: center;
+  padding-top: 20px;
+  border-radius: 4px;
+  height: 560px;
+  background-color: #ccc;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-container .input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;    
+}
+
+.form-container .input-group label {
+  margin-bottom: 5px;
+}
+
+.input-field{
+  width: 350px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+.input-field:focus{
+  outline: none 0;
+  border: 2px solid #898787;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About Us</title>
+        <link rel="stylesheet" href="styles/about_us.css">
+        <link rel="stylesheet" href="styles/header_footer_revise.css">
+        <link rel="shortcut icon" href="images/logo.jpeg" type="image/x-icon">
+        <script src="https://kit.fontawesome.com/c0ffbede71.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <!-- Logo image or text -->
+                <img src="images/logo.jpeg" alt="Logo" width="100" height="100" />
+            </div>
+    
+            <div class="navigation">
+                <ul>
+                    <!-- First row of navigation tabs -->
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="channelDoctor.php">Medical Services</a></li>
+                    <li><a href="healthPlans.php">Insurance Plan</a></li>
+                    <li><a href="news.php">News</a></li>
+                    <li><a href="MedicalStore.php">Medical Store</a></li>
+                </ul>
+                <ul class="header_nav">
+                    <!-- Second row of navigation tabs -->
+                    <li><a href="patientlogin.html">Customer Portal</a></li>
+                    <li><a href="pay_online.html">Pay Online</a></li>
+                    <li><a href="contact_us.php">Contact Us</a></li>
+                    <li><a class="active" href="about_us.html">About Us</a></li>
+                </ul>
+            </div>
+    
+            <div class="search-bar">
+                <!-- Search bar -->
+                <input type="text" placeholder="Search..." />
+                <button type="submit">Search</button>
+                <!--<button type="submit" class="sign">Sign Up/Login</button>-->
+                <button id="profile" name="profile" onclick="redirectToProfile()">
+                    <i class="fa-solid fa-user"></i> 
+                    <a href="handle_profile.php" style="text-decoration: none;">Profile</a>
+                </button>
+            </div>
+    
+            <div style="clear: both;"></div> <!-- Clear float -->
+        </header>
+        <div class="about-us-container">
+            <h2>Our Team</h2>
+            <hr>
+
+            <div class="members1">
+                <div class="team">
+                    <img src="images/minindi.jpg" alt="Minindi"><br>
+                    <h4>Fonseka W S M</h4>
+                    <p>IT22109712</p>
+                </div>
+    
+                <div class="team">
+                    <img src="images/tharindu.jpg" alt="Tharindu"><br>
+                    <h4>Siriwardhana A H L T S</h4>
+                    <p>IT22094568</p>
+                </div>
+    
+                <div class="team">
+                    <img src="images/james.jpg" alt="James"><br>
+                    <h4>Sembukuttiarachchi J S</h4>
+                    <p>IT22122414</p>
+                </div>
+            </div>
+            <div class="members2">
+                <div class="team">
+                    <img src="images/rakindu.jpg" alt="Rakindu"><br>
+                    <h4>Marambe R T</h4>
+                    <p>IT22111906</p>
+                </div>
+    
+                <div class="team">
+                    <img src="images/jola.jpg" alt="Kavinda"><br>
+                    <h4>Kavinda K G D</h4>
+                    <p>IT22576170</p>
+                </div>
+            </div>    
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col">
+                    <img src="images/logo.jpeg" alt="Logo" style="width: 100px; height: 100px;" />
+                    <p>"SecureCare: Your Health, Our Priority"</p>
+                </div>
+                <div class="col">
+                    <h3>Links</h3>
+                    
+                    <div class="footer-link-buttons">
+                        <div><a href="contact_us.php">Contact Us</a></div>
+                        <div><a href="">Terms & Conditions</a></div>
+                        <div><a href="">Privacy & Cookies Policy</a></div>
+                        <div><a href="faq.html">FAQ's</a></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h3>Newsletter</h3>
+                    <form action="newsletter.php" method="post" id="newsletterForm">
+                        <div style="width: 88%; margin-top: 10px;">
+                            <input type="email" id="emailInput" name="email" placeholder="Enter your email" required>
+                        </div>
+    
+                        <div>
+                            <button id="subscribeButton" name="submit" value="subscribe">Subscribe</button>
+                            <button id="unsubscribeButton" name="submit" value="unsubscribe">Unsubscribe</button>
+                            <button type="button" id="updateButton" name="submit" value="update">Update</button>
+                        </div>
+    
+                        <div class="social-icons">
+                            <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="www.linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="www.dribble.com"><i class="fa-brands fa-dribbble"></i></a>
+                        </div>
+    
+                        <!-- Hidden dialog box -->
+                        <div id="changeEmail" style="display: none;">
+                            <input type="email" id="oldEmailInput" name="old_email" placeholder="Old Email">
+                            <button type="submit" name="confirm_update" onclick="validateAndSubmit()">OK</button>
+                        </div>
+    
+                        <script>
+                            function showChangeEmail(event) {
+                                event.preventDefault(); // Prevent form submission
+    
+                                document.getElementById("emailInput").placeholder = "New Email";
+                                document.getElementById("subscribeButton").style.display = "none";
+                                document.getElementById("unsubscribeButton").style.display = "none";
+                                document.getElementById("updateButton").style.display = "none";
+                                document.getElementById("changeEmail").style.display = "block";
+                            }
+    
+                            function validateAndSubmit(event) {
+                                event.preventDefault(); // Prevent form submission
+    
+                                var oldEmail = document.getElementById("oldEmailInput").value;
+                                var newEmail = document.getElementById("emailInput").value;
+    
+                                if (oldEmail && newEmail) {
+                                    document.getElementById("newsletterForm").submit(); // Submit the form
+                                }
+                            }
+    
+                            document.getElementById('updateButton').addEventListener('click', showChangeEmail);
+                        </script>
+                    </form>
+    
+                </div>
+            </div>
+                
+            
+            <div><p class="copyright">&copy 2023 All rights reserved.</p></div>
+            
+        </footer>
+    </body>
+</html>
