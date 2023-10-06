@@ -60,7 +60,7 @@ Note that this path only works for the default directory and you should change y
 - [W.S.M. Fonseka]()
 - [J.S. Sembukuttiarachchi](https://github.com/JamesSembukuttiarachchi)
 - [K.G.D. Kavinda](https://github.com/kavindakgd)
-- [R.T. Marambe]()
+- [R.T. Marambe](https://github.com/RakinduM)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
