@@ -71,5 +71,5 @@ We would like to thank our instructors and classmates for their support and guid
 ## Contact
 If you have any questions or feedback, please feel free to contact us at [kavindakgd@gmail.com](mailto:kavindakgd@gmail.com).
 
----
+----
 **Note:** This README.md provides an overview of the Secure Care project. For detailed instructions and information, please refer to the project's source code.
