@@ -57,10 +57,10 @@ Note that this path only works for the default directory and you should change y
 
 ## Contributors
 - [A.H.L.T.S. Siriwardhana](https://github.com/Silverviles)
-- [W.S.M. Fonseka]()
+- [W.S.M. Fonseka](https://github.com/Minniefo)
 - [J.S. Sembukuttiarachchi](https://github.com/JamesSembukuttiarachchi)
 - [K.G.D. Kavinda](https://github.com/kavindakgd)
-- [R.T. Marambe]()
+- [R.T. Marambe](https://github.com/RakinduM)
 
 ## License
 This project is licensed under the [MIT License](LICENSE).
